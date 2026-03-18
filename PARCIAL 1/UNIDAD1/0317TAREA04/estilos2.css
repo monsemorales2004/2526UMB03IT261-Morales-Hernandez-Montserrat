@@ -1,33 +1,33 @@
 body 
 {
-    background-color: rgb(229, 221, 232);
+    background-color: #8e78f3;
     text-align: center;
 }
 
 h2 
 {
-    background-color: rgba(96, 232, 158, 0.842);
+    background-color: rgba(249, 107, 107, 0.842);
 }
 
 h2
 {
-    background-color: rgb(243, 190, 83);
+    background-color: rgb(166, 235, 48);
 }
 
 p
 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 p
 {
-    font-size: 18px; line-height: 2;
+    font-size: 12px; line-height: 5;
 }
 
 
 table
 {
     border: 1px solid #333;   
-    padding: 10px;            
+    padding: 9px;            
     text-align: center;
 }
