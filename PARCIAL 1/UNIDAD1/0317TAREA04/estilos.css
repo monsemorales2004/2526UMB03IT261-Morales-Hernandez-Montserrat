@@ -29,5 +29,12 @@ img
     width: 600px ;
 }
 
+table
+{
+    border: 1px solid #333;   
+    padding: 10px;            
+    text-align: center;
+}
+
 
 
