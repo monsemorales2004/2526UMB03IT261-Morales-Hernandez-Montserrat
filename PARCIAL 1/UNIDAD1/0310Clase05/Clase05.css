@@ -1,0 +1,56 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+03
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+
+#titulo {
+    background-color: rgb(199, 4, 4);
+    padding: 10px;
+}
+
+
+.parrafo {
+    color: rgb(15, 7, 228);
+    margin: 10px;
+}
+.parrafo1 {
+    color: rgb(219, 144, 15);
+    margin: 10px;
+}
+
+
+.especial {
+    color: red;
+    font-weight: bold;
+}
+
+
+.contenedor p {
+    color: green;
+}
+
+
+a:hover {
+    color: orange;
+}
+
+
+h1, p {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+
+.lista {
+    margin: 20px;
+}
