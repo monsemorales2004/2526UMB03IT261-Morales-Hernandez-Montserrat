@@ -1,0 +1,238 @@
+<html>
+<head>
+    <title>Las 7 Maravillas del Mundo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1e140f; 
+            color: #f4f1de;           
+            font-family: 'Segoe UI', Roboto, sans-serif;
+            padding-bottom: 80px;
+        }
+
+        .main-title {
+            text-align: center;
+            padding: 60px 0;
+            background: linear-gradient(to bottom, #3d2b1f, #1e140f);
+            border-bottom: 3px solid #a66348; 
+            margin-bottom: 50px;
+        }
+
+        .main-title h1 {
+            font-family: 'Georgia', serif;
+            letter-spacing: 4px;
+            color: #e9c46a; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .wonder-card {
+            background-color: #2b1d16; 
+            border: 1px solid #4d3a2e; 
+            border-radius: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .wonder-card:hover {
+            transform: translateY(-8px);
+            border-color: #e9c46a; 
+        }
+
+        .img-box {
+            overflow: hidden;
+            height: 220px;
+        }
+
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(0.2);
+        }
+
+        .card-body-custom {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card-body-custom h3 {
+            color: #e9c46a; 
+            font-family: 'Georgia', serif;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .country-label {
+            color: #a66348; 
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .text-desc {
+            font-size: 0.9rem;
+            color: #d1d1d1;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .info-detail {
+            background-color: rgba(0,0,0,0.3);
+            padding: 12px;
+            font-size: 0.85rem;
+            border-left: 3px solid #a66348; 
+            margin-top: auto;
+        }
+
+        .info-detail b {
+            color: #e9c46a; 
+            display: block;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            margin-bottom: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-title">
+        <div class="container">
+            <h1>Las 7 Maravillas Modernas</h1>
+            <p style="opacity: 0.8;">Un registro detallado de el arte humano</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row g-4">
+
+            <div class="col-lg-4 col-md-6">
+                <div class="wonder-card">
+                    <div class="img-box">
+                        <img src="https://th.bing.com/th/id/R.a607d081024dc1a2ba637e059d1c6c63?rik=CrRlON9WMcxWNw&riu=http%3a%2f%2f3.bp.blogspot.com%2f-XtAgYDTzLzQ%2fULS5JKkYLtI%2fAAAAAAAAS9Y%2fM18nIbrsb_c%2fs1600%2fancient_mayan_ruins_chichen_itza_mexico-1280x1024%2bcopy.jpg&ehk=RHbW04mAsM3pOA%2fgqiyaFYQ%2frGuIMZOPTE%2f57z35fJc%3d&risl=&pid=ImgRaw&r=0" alt="Chichen Itza">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Chichen Itza</h3>
+                        <span class="country-label">Mexico</span>
+                        <p class="text-desc">Centro politico y religioso de la cultura Maya. Su estructura mas famosa es el Templo de Kukulcan, una piramide que servia como un inmenso calendario solar.</p>
+                        <div class="info-detail">
+                            <b>Dato</b>
+                            Durante los equinoccios, el sol proyecta la sombra de una serpiente que parece descender por las escaleras.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="wonder-card">
+                    <div class="img-box">
+                        <img src="https://th.bing.com/th/id/R.e74f90982fa99d1daa85fb222330c9cf?rik=tQFsnmYgSSyfRA&pid=ImgRaw&r=0" alt="Coliseo">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>El Coliseo</h3>
+                        <span class="country-label">Italia</span>
+                        <p class="text-desc">El anfiteatro mas grande del Imperio Romano. Con capacidad para 50,000 personas, fue escenario de batallas de gladiadores y espectaculos epicos.</p>
+                        <div class="info-detail">
+                            <b>Dato</b>
+                            Poseia un complejo sistema de tuneles y ascensores bajo la arena (el hipogeo) para sorprender al publico.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="wonder-card">
+                    <div class="img-box">
+                        <img src="https://th.bing.com/th/id/R.8547b94d59973673ba270f820222c3d6?rik=vZ9qrvL3GqVB7A&pid=ImgRaw&r=0" alt="Cristo">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Cristo Redentor</h3>
+                        <span class="country-label">Brasil</span>
+                        <p class="text-desc">Ubicada a 710 metros sobre el nivel del mar. Esta estatua Art Deco es un faro de fe y el simbolo mas reconocible de Rio de Janeiro.</p>
+                        <div class="info-detail">
+                            <b>Dato</b>
+                            Esta revestido de miles de azulejos de esteatita, material que resiste mejor la erosion y los rayos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="wonder-card">
+                    <div class="img-box">
+                        <img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d" alt="Gran Muralla">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>La Gran Muralla</h3>
+                        <span class="country-label">China</span>
+                        <p class="text-desc">Una fortificacion militar de mas de 21,000 km construida para proteger las fronteras del imperio chino de las invasiones nomadas.</p>
+                        <div class="info-detail">
+                            <b>Dato</b>
+                            Se utilizo harina de arroz pegajoso en el mortero para unir los ladrillos, dandole una resistencia asombrosa.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="wonder-card">
+                    <div class="img-box">
+                        <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1" alt="Machu Picchu">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Machu Picchu</h3>
+                        <span class="country-label">Peru</span>
+                        <p class="text-desc">Ciudadela Inca del siglo XV situada en los Andes. Fue un centro ceremonial construido con una precision tecnica que desafia al tiempo.</p>
+                        <div class="info-detail">
+                            <b>Dato</b>
+                            Las piedras encajan sin mortero. Este disenio permite que, durante un terremoto, las piedras "bailen" y se reacomoden.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="wonder-card">
+                    <div class="img-box">
+                        <img src="https://tse1.explicit.bing.net/th/id/OIP.SbWABeoL7-5LrYX15tBPBwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Petra">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Petra</h3>
+                        <span class="country-label">Jordania</span>
+                        <p class="text-desc">La capital de los Nabateos, famosa por sus fachadas talladas directamente en los acantilados de piedra arenisca rosada.</p>
+                        <div class="info-detail">
+                            <b>Dato</b>
+                            Dominaron el desierto creando una red de canales y cisternas para abastecer de agua a 30,000 personas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mx-auto">
+                <div class="wonder-card">
+                    <div class="img-box">
+                        <img src="https://wallpaperaccess.com/full/107749.jpg"></div>
+
+            <div class="wonder-text-box" alt="Taj Mahal">
+                    </div>
+                    <div class="card-body-custom">
+                        <h3>Taj Mahal</h3>
+                        <span class="country-label">India</span>
+                        <p class="text-desc">Mausoleo de marmol blanco construido por amor. El emperador Shah Jahan lo ordeno tras la muerte de su esposa Mumtaz Mahal.</p>
+                        <div class="info-detail">
+                            <b>Dato</b>
+                            Los minaretes estan inclinados hacia afuera para que, en caso de sismo, caigan lejos de la tumba principal.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
