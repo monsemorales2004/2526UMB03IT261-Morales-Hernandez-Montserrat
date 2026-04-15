@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Eventos JS - Ejemplo</title>
+</head>
+<body>
+
+<h1>Demostración de Eventos en JS</h1>
+
+<button id="btnSaludo">Saludar</button>
+<button id="btnColor">Cambiar Color</button>
+
+<form id="registro">
+  <input type="text" id="nombre" placeholder="Escribe tu nombre">
+  <button type="submit">Registrar</button>
+</form>
+
+<select id="menu">
+  <option value="Rojo">Rojo</option>
+  <option value="Verde">Verde</option>
+  <option value="Azul">Azul</option>
+</select>
+
+<div id="cuadro" style="width:120px;height:120px;background:rgb(124, 171, 187);margin-top:10px;"></div>
+
+<script>
+// 1. Click
+document.getElementById("btnSaludo").addEventListener("click", function() {
+  alert("¡Hola! Evento de click activado");
+});
+
+// 2. Doble click
+document.getElementById("btnColor").addEventListener("dblclick", function() {
+  document.body.style.background = "lightyellow";
+  alert("Doble click: fondo cambiado");
+});
+
+// 3. Submit
+document.getElementById("registro").addEventListener("submit", function(e) {
+  e.preventDefault();
+  alert("Registro completado: " + document.getElementById("nombre").value);
+});
+
+// 4. Input
+document.getElementById("nombre").addEventListener("input", function() {
+  console.log("Texto ingresado: " + this.value);
+});
+
+// 5. Keydown
+document.addEventListener("keydown", function(e) {
+  console.log("Presionaste la tecla: " + e.key);
+});
+
+// 6. Mouseover
+document.getElementById("cuadro").addEventListener("mouseover", function() {
+  this.style.background = "orange";
+});
+
+// 7. Change
+document.getElementById("menu").addEventListener("change", function() {
+  document.getElementById("cuadro").style.background = this.value.toLowerCase();
+});
+
+// 8. Focus
+document.getElementById("nombre").addEventListener("focus", function() {
+  this.style.border = "2px solid green";
+});
+
+// 9. Blur
+document.getElementById("nombre").addEventListener("blur", function() {
+  this.style.border = "1px solid gray";
+});
+
+// 10. Load
+window.addEventListener("load", function() {
+  console.log("La página está lista para usarse");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Validaciones en JS</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input, button { margin: 5px 0; padding: 5px; }
+    .resultado { margin-top: 10px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de Validación en JavaScript</h1>
+
+  <!-- Validación de cadenas -->
+  <h2>🔤 Cadenas de texto</h2>
+  <input type="text" id="texto" placeholder="Escribe algo...">
+  <button onclick="probarTexto()">Validar Texto</button>
+  <div id="resTexto" class="resultado"></div>
+
+  <!-- Validación de fechas -->
+  <h2>📅 Fechas</h2>
+  <input type="text" id="fecha" placeholder="YYYY-MM-DD">
+  <button onclick="probarFecha()">Validar Fecha</button>
+  <div id="resFecha" class="resultado"></div>
+
+  <!-- Validación de números -->
+  <h2>🔢 Números</h2>
+  <input type="number" id="numero" placeholder="Escribe un número">
+  <button onclick="probarNumero()">Validar Número</button>
+  <div id="resNumero" class="resultado"></div>
+
+  <script>
+    // --- FUNCIONES DE VALIDACIÓN ---
+
+    // 1. No vacío
+    function validarNoVacio(str) {
+      let texto = str.trim();
+      return texto.length > 0;
+    }
+
+    // 2. Solo letras
+    function validarSoloLetras(str) {
+      let regex = /^[A-Za-zÁÉÍÓÚáéíóúñÑ\s]+$/;
+      return regex.test(str);
+    }
+
+    // 3. Email
+    function validarEmail(email) {
+      let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+
+    // 4. Longitud mínima y máxima
+    function validarLongitud(str, min, max) {
+      let longitud = str.length;
+      return longitud >= min && longitud <= max;
+    }
+
+    // 5. Formato fecha
+    function validarFormatoFecha(fecha) {
+      let regex = /^\d{4}-\d{2}-\d{2}$/;
+      return regex.test(fecha);
+    }
+
+    // 6. Fecha real
+    function validarFechaReal(fecha) {
+      let d = new Date(fecha);
+      return !isNaN(d.getTime());
+    }
+
+    // 7. Fecha pasada
+    function validarFechaPasada(fecha) {
+      let d = new Date(fecha);
+      let hoy = new Date();
+      return d <= hoy;
+    }
+
+    // 8. Entero
+    function validarEntero(num) {
+      let esEntero = Number.isInteger(num);
+      return esEntero;
+    }
+
+    // 9. Positivo
+    function validarPositivo(num) {
+      let esPositivo = typeof num === "number" && num > 0;
+      return esPositivo;
+    }
+
+    // 10. Rango
+    function validarRango(num, min, max) {
+      let dentroRango = num >= min && num <= max;
+      return dentroRango;
+    }
+
+    // --- FUNCIONES DE PRUEBA ---
+    function probarTexto() {
+      let str = document.getElementById("texto").value;
+      let resultado = "";
+
+      resultado += "No vacío: " + validarNoVacio(str) + "<br>";
+      resultado += "Solo letras: " + validarSoloLetras(str) + "<br>";
+      resultado += "Email válido: " + validarEmail(str) + "<br>";
+      resultado += "Longitud (3-10): " + validarLongitud(str, 3, 10) + "<br>";
+
+      document.getElementById("resTexto").innerHTML = resultado;
+    }
+
+    function probarFecha() {
+      let fecha = document.getElementById("fecha").value;
+      let resultado = "";
+
+      resultado += "Formato correcto: " + validarFormatoFecha(fecha) + "<br>";
+      resultado += "Fecha real: " + validarFechaReal(fecha) + "<br>";
+      resultado += "No futura: " + validarFechaPasada(fecha) + "<br>";
+
+      document.getElementById("resFecha").innerHTML = resultado;
+    }
+
+    function probarNumero() {
+      let num = Number(document.getElementById("numero").value);
+      let resultado = "";
+
+      resultado += "Es entero: " + validarEntero(num) + "<br>";
+      resultado += "Es positivo: " + validarPositivo(num) + "<br>";
+      resultado += "En rango (1-100): " + validarRango(num, 1, 100) + "<br>";
+
+      document.getElementById("resNumero").innerHTML = resultado;
+    }
+  </script>
+</body>
+</html>
